@@ -1,5 +1,5 @@
 import { app, db } from './firebaseConfig.js'; 
-import { collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
 function getInputs() {
     return {
@@ -34,14 +34,14 @@ function limpar({ nome, cpf, telefone, email, historicoReservas }) {
 document.getElementById("btnEnviar").addEventListener('click', async function () {
     const Inputs = getInputs();
     const dados = getValores(Inputs);
-
+    console.log ("Buscar dados",dados)
     if (!dados.nome || !dados.cpf || !dados.telefone || !dados.email || !dados.historicoReservas) {
         alert("Preencha todos os campos.");
         return;
     }
 
     try {
-        const ref = await addDoc(collection(db, "clientes"), dados);
+       const ref = await addDoc(collection(db, "clientes"), dados); 
         console.log("ID do documento", ref.id);
         limpar(Inputs);
         alert("Cliente cadastrado com sucesso!");
