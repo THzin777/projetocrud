@@ -84,3 +84,27 @@ h1, h2 {
 #listar-clientes {
     margin-top: 20px;
 } 
+
+header {
+    background-color: #1a1a1a; 
+    color: #fff; 
+    padding: 20px 40px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+  .logo {
+    font-size: 24px; 
+    font-weight: bold; 
+  }
+
+  nav a {
+    color: #fff; 
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-size: 16px; 
+  }
+
+  nav a:hover {
+    text-decoration: underline; 
+  }

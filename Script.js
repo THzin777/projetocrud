@@ -1,5 +1,5 @@
 import { app, db } from './firebaseConfig.js'; 
-import { collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+import { collection, addDoc, getDocs, doc, deleteDoc, getDoc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
 function getInputs() {
     return {
@@ -59,6 +59,7 @@ async function buscarClientes() {
     }
     return clientes;
 }
+
 
 const listaClientesDiv = document.getElementById("listar-clientes");
 
